@@ -25,6 +25,8 @@ public class Animal : MonoBehaviour
     void Start () 
     {
         Debug.Log(JsonUtility.ToJson(this));
+        PlayerPrefs.SetString("Animals pref", JsonUtility.ToJson(this));
+        Debug.Log(PlayerPrefs.GetString("Animals pref"));
 	}
 	
 	void Update () 
